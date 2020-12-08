@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">PropertyListing</string>
+
+    <string name="property_listing">Property Listing</string>
+    <string name="your_personal_diary">Your Personal Diary....</string>
+    <string name="add_property">Add Property</string>
+    <string name="search_property">Search Property</string>
+    <string name="list_property">List Property</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="or">Or</string>
+    <string name="not_sign_up_yet_sign_up">Not sign up yet? Sign Up</string>
+    <string name="full_name">Full Name</string>
+    <string name="welcome_to_our_app">Welcome to our app</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="re_type_password">Re-Type Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_sign_up_login">Already sign up? Login</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="logout">Logout</string>
+    <string name="help">Help</string>
+    <string name="select_property_to_add">Select Property to Add</string>
+    <string name="ok">OK</string>
+    <string name="seller_name">Seller Name</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="property_address">Property Address</string>
+    <string name="society_name">Society Name</string>
+    <string name="asking_price">Asking Price</string>
+    <string name="new_r">New</string>
+    <string name="old">Old</string>
+    <string name="under_construction">Under Construction</string>
+    <string name="condition">Condition</string>
+    <string name="floor">Floor</string>
+    <string name="category">Category</string>
+    <string name="b">B</string>
+    <string name="a">A</string>
+    <string name="ground">Ground</string>
+    <string name="first">First</string>
+    <string name="second">Second</string>
+    <string name="top">Top</string>
+    <string name="submit">Submit</string>
+    <string name="enter_flat_details">Enter Flat Details</string>
+    <string name="hig">HIG</string>
+    <string name="lig">LIG</string>
+    <string name="ews">EWS</string>
+    <string name="mig">MIG</string>
+    <string name="enter_kothi_details">Enter Kothi Details</string>
+    <string name="triple">Triple</string>
+    <string name="double_s">Double</string>
+    <string name="single">Single</string>
+    <string name="basement">Basement</string>
+    <string name="for_sale">For Sale</string>
+    <string name="full">Full</string>
+    <string name="storey">Storey</string>
+    <string name="enter_sco_details">Enter Sco Details</string>
+    <string name="enter_booth_details">Enter Booth Details</string>
+    <string name="society_list">Society List</string>
+    <string name="select_property_to_list">Select Property to List</string>
+    <string name="select_property_to_search">Select Property to Search</string>
+    <string name="optional">(Optional)</string>
+    <string name="change_password">Change Password</string>
+
+    <array name="properties">
+        <item>Select Property</item>
+        <item>Society Flat</item>
+        <item>HousingBoard Flat</item>
+        <item>Kothi</item>
+        <item>Sco</item>
+        <item>Booth</item>
+    </array>
+
+    <array name="locality">
+        <item>Select City</item>
+        <item>Chandigarh</item>
+        <item>Mohali</item>
+        <item>Panchkula</item>
+    </array>
+
+    <array name="search_locality">
+        <item>Select City</item>
+        <item>All</item>
+        <item>Chandigarh</item>
+        <item>Mohali</item>
+        <item>Panchkula</item>
+    </array>
+
+</resources>

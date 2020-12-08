@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#E8E8E8"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/bannerRelLayout"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/ivBanner"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/select_property_banner"
+            android:layout_width="75dp"
+            android:layout_height="42dp" />
+
+        <TextView
+            android:id="@+id/ivSelectPropertyInfo"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="22sp"
+            android:text="@string/select_property_to_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/spinnerSelectProperty"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/spinner_border"
+        android:layout_below="@id/bannerRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/spinnerSelectProperty"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp" />
+
+    <TextView
+        android:id="@+id/tvOkDismiss"
+        android:text="@string/ok"
+        android:layout_below="@id/lineView"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:textColor="@color/colorAccent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

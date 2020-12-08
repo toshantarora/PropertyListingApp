@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvScoInfo"
+            android:textSize="30sp"
+            android:textColor="#373737"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/enter_sco_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/ivSco"
+            android:layout_below="@id/tvScoInfo"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_sco"
+            android:layout_width="120dp"
+            android:layout_height="120dp" />
+
+        <RelativeLayout
+            android:id="@+id/inputRelLayout"
+            android:layout_below="@id/ivSco"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputSellerName"
+                app:boxStrokeColor="@color/colorGrey"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/seller_name"
+                    android:singleLine="true"
+                    android:maxLength="40"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:inputType="textNoSuggestions|textCapWords"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputContactNumber"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/textInputSellerName"
+                app:boxStrokeColor="@color/colorGrey"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/contact_number"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:digits="0123456789"
+                    android:inputType="phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPropertyAddress"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/textInputContactNumber"
+                app:boxStrokeColor="@color/colorGrey"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/property_address"
+                    android:gravity="start"
+                    android:lines="5"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:maxLength="200"
+                    android:inputType="textMultiLine|textPostalAddress|textNoSuggestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spinnerCity"
+                android:layout_marginTop="11dp"
+                android:layout_below="@id/textInputPropertyAddress"
+                android:background="@drawable/spinner_border"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <TextView
+                android:id="@+id/tvCitySector"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/spinnerCity"
+                android:textColor="#009688"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputAskPrice"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/tvCitySector"
+                app:boxStrokeColor="@color/colorGrey"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/asking_price"
+                    android:singleLine="true"
+                    android:maxLength="50"
+                    android:digits="0123456789-."
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/radioBtnLinearLayout"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_below="@id/textInputAskPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@drawable/linear_layout_border"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/condition"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="6dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioGroup
+                        android:id="@+id/radioCondition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/rbNew"
+                            android:text="@string/new_r"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:id="@+id/rbOld"
+                            android:text="@string/old"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <RadioButton
+                            android:id="@+id/rbUnderConstruction"
+                            android:text="@string/under_construction"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@drawable/linear_layout_border"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/storey"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="6dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioGroup
+                        android:id="@+id/radioStorey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/rbSingle"
+                            android:text="@string/single"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:id="@+id/rbDouble"
+                            android:text="@string/double_s"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <RadioButton
+                            android:id="@+id/rbTriple"
+                            android:text="@string/triple"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/checkboxBasement"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/basement" />
+
+                <TableLayout
+                    android:background="@drawable/linear_layout_border"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:text="@string/for_sale"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginStart="6dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <CheckBox
+                            android:id="@+id/checkboxFull"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/full" />
+                        <CheckBox
+                            android:id="@+id/checkboxGround"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ground" />
+                    </TableRow>
+
+                    <TableRow>
+                        <CheckBox
+                            android:id="@+id/checkboxFirst"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/first" />
+
+                        <CheckBox
+                            android:id="@+id/checkboxSecond"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/second" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSubmitSco"
+            android:text="@string/submit"
+            android:background="@drawable/corners_rounded_circle"
+            android:textColor="@color/colorWhite"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@id/inputRelLayout"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+</ScrollView>
